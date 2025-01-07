@@ -1,3 +1,7 @@
-import { useState } from 'react';
-import { useRouter } from 'next/router';
-import styles from '@/styles/dark_mode/home.module.css';
+export default function DarkModeHome() {
+    return (
+      <div>
+        <h1>Welkom bij Dark Mode Home</h1>
+      </div>
+    );
+  }

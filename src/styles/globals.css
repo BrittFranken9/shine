@@ -6,3 +6,13 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
+html, body {
+    margin: 0; /* Verwijder standaard marges */
+    padding: 0; /* Verwijder standaard paddings */
+    height: 100%; /* Zorg ervoor dat de html en body 100% van de hoogte nemen */
+  }
+  
+  #root, #__next {
+    height: 100%; /* Voor Next.js, zorg ervoor dat de root-container ook 100% hoogte heeft */
+  }

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import styles from '@/styles/navigation/footer.module.css';
+import styles from '@/styles/navigation/light_mode/footer.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 

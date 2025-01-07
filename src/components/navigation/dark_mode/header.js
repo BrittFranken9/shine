@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '@/styles/navigation/header.module.css';
+import styles from '@/styles/navigation/dark_mode/header.module.css';
 
 export default function Navbar() {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -28,10 +28,10 @@ export default function Navbar() {
             </div>
             <div className={styles.rightLink}>
                 <Link href="/light_mode/meldingen">
-                    <Image src="/meldingen.svg" alt="Another Icon" width={30} height={20} />
+                    <Image src="/meldingen.svg" alt="meldingen" width={30} height={20} />
                 </Link>
                 <Link href="/light_mode/instellingen">
-                    <Image src="/instellingen.svg" alt="Another Icon" width={30} height={20} />
+                    <Image src="/instellingen.svg" alt="instellingen" width={30} height={20} />
                 </Link>
             </div>
             
