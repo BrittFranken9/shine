@@ -69,3 +69,23 @@
     background-color: #ffffff; /* Kleur van het kader */
     z-index: 999; /* Lager dan de footer (z-index: 1000) */
   }
+
+  .word1 {
+    color: #51BCFE; /* Blauw */
+  }
+
+  .word2 {
+    color: #B97C96; /* Blauw */
+  }
+
+  .word3 {
+    color: #FE5351; /* Blauw */
+  }
+
+  .word4 {
+    color: #FE9351; /* Blauw */
+  }
+
+  .word5 {
+    color: #FEBA51; /* Blauw */
+  }

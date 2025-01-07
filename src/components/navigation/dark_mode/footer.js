@@ -18,7 +18,9 @@ export default function Footer() {
                 width={40}
                 height={40}
               />
-              <span className={`${styles.footerLabel} ${styles.homeLabel}`}>Home</span>
+              <span className={`${styles.footerLabel}`}>
+                <span className={styles.word1}>Home</span>
+              </span>
             </div>
           </Link>
           <Link href="/dark_mode/connecties" passHref>
@@ -30,7 +32,9 @@ export default function Footer() {
                 width={40}
                 height={40}
               />
-              <span className={`${styles.footerLabel} ${styles.connectiesLabel}`}>Connecties</span>
+              <span className={`${styles.footerLabel}`}>
+                <span className={styles.word2}>connecties</span>
+              </span>
             </div>
           </Link>
           <Link href="/dark_mode/nieuw" passHref>
@@ -42,7 +46,9 @@ export default function Footer() {
                 width={60} // Middelste groter
                 height={60}
               />
-              <span className={`${styles.footerLabel} ${styles.nieuwLabel}`}>Nieuw</span>
+              <span className={`${styles.footerLabel}`}>
+                <span className={styles.word3}>Nieuw</span>
+              </span>
             </div>
           </Link>
           <Link href="/dark_mode/statistieken" passHref>
@@ -54,7 +60,9 @@ export default function Footer() {
                 width={40}
                 height={40}
               />
-              <span className={`${styles.footerLabel} ${styles.statistiekenLabel}`}>Statistieken</span>
+              <span className={`${styles.footerLabel}`}>
+                <span className={styles.word4}>Statistieken</span>
+              </span>
             </div>
           </Link>
           <Link href="/dark_mode/profiel" passHref>
@@ -66,7 +74,9 @@ export default function Footer() {
                 width={40}
                 height={40}
               />
-              <span className={`${styles.footerLabel} ${styles.profielLabel}`}>Profiel</span>
+              <span className={`${styles.footerLabel}`}>
+                <span className={styles.word5}>Profiel</span>
+              </span>
             </div>
           </Link>
         </div>

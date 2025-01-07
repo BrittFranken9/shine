@@ -3,12 +3,8 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(90deg, #51BCFE, #FE5351, #FEBA51); /* Grote gradient */
     padding-bottom: 30px;
     z-index: 1000;
-    color: transparent; /* Zorgt dat tekst transparant is */
-    -webkit-background-clip: text; /* Maakt de gradient zichtbaar op tekst */
-    background-clip: text;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,10 +38,6 @@
   .footerLabel {
     margin-top: 5px; /* Minder ruimte tussen icoon en label */
     font-size: 12px;
-    background: inherit; /* Gebruik dezelfde gradient als de iconen */
-    -webkit-background-clip: text; /* Zorg dat de gradient zichtbaar is */
-    background-clip: text;
-    -webkit-text-fill-color: transparent; /* Zorg dat tekst transparant is */
     text-decoration: none;
   }
   
@@ -68,4 +60,24 @@
       height: 100px; /* Zorgt dat de achtergrond even groot is als de footer */
       background-color: #333333; /* Kleur van het kader */
       z-index: 999; /* Lager dan de footer (z-index: 1000) */
+    }
+
+    .word1 {
+      color: #51BCFE; /* Blauw */
+    }
+
+    .word2 {
+      color: #B97C96; /* Blauw */
+    }
+
+    .word3 {
+      color: #FE5351; /* Blauw */
+    }
+
+    .word4 {
+      color: #FE9351; /* Blauw */
+    }
+
+    .word5 {
+      color: #FEBA51; /* Blauw */
     }
