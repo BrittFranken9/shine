@@ -45,11 +45,11 @@ export default function Login() {
                 </div>
                 <div className={styles.socialButtons}>
                     <button onClick={handleGoogleLogin} className={`${styles.button} ${styles.googleButton}`}>
-                        <Image src="/google-logo.svg" alt="Google Logo" width={20} height={20} className={styles.socialIcon} />
+                        <Image src="/icons/Google.svg" alt="Google Logo" width={16} height={16} className={styles.socialIcon} />
                         Google
                     </button>
                     <button onClick={handleFacebookLogin} className={`${styles.button} ${styles.facebookButton}`}>
-                        <Image src="/facebook-logo.svg" alt="Facebook Logo" width={20} height={20} className={styles.socialIcon} />
+                        <Image src="/icons/Facebook.svg" alt="Facebook Logo" width={16} height={16} className={styles.socialIcon} />
                         Facebook
                     </button>
                 </div>

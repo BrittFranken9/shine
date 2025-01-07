@@ -46,6 +46,7 @@
     color: #333333;
     margin-left: 20px;
     margin-right: 20px;
+    text-transform: uppercase;
 }
 
 .gradientText {

@@ -9,24 +9,24 @@ export default function Uitleg() {
 
     const steps = [
         {
-            image: '/step1-image.svg',
+            image: '/Zelfzorg.svg',
             title: 'Shine Zelfzorg anders bekeken',
             gradientWord: 'Zelfzorg',
             description: 'Luna en Noa zijn er om je kort wegwijs te maken in Shine. Ze geven je een snelle blik op wat je kunt verwachten en hoe de app werkt.',
         },
         {
-            image: '/step2-image.svg',
+            image: '/Emoties.svg',
             title: 'Jouw emoties, jouw woorden, jouw groei',
             gradientWord: 'emoties',
         },
         {
-            image: '/step3-image.svg',
+            image: '/connecties.svg',
             title: 'Verbind met je psycholoog, ontdek jezelf door je emoties',
             gradientWord: 'psycholoog',
             description: 'Ontdek jezelf door je emoties beter te begrijpen. Deel deze inzichten met je psycholoog, zodat deze jou beter kan ondersteunen.',
         },
         {
-            image: '/step4-image.svg',
+            image: '/Triggers.svg',
             title: 'ontdek de triggers achter je emoties',
             gradientWord: 'triggers',
             description: 'Krijg inzicht in de emoties die je ervaart en ontdek de oorzaken ervan. Dit helpt je beter te begrijpen hoe jij je voelt en waarom.',
@@ -73,8 +73,8 @@ export default function Uitleg() {
                 <Image
                     src={steps[currentStep].image}
                     alt={`Stap ${currentStep + 1}`}
-                    width={300}
-                    height={200}
+                    width={400}
+                    height={350}
                 />
             </div>
     

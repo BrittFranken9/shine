@@ -31,10 +31,10 @@ export default function Login() {
                 <form onSubmit={handleSubmit} className={styles.form}>
                     <div className={styles.inputGroup}>
                         <Image 
-                            src="/email-icon.svg" 
+                            src="/icons/Mail.svg" 
                             alt="Email" 
-                            width={24} 
-                            height={24} 
+                            width={20} 
+                            height={20} 
                             className={styles.icon} 
                         />
                         <input
@@ -48,10 +48,10 @@ export default function Login() {
                     </div>
                     <div className={styles.inputGroup}>
                         <Image 
-                            src="/password-icon.svg" 
+                            src="/icons/Wactwoord.svg" 
                             alt="Password" 
-                            width={24} 
-                            height={24} 
+                            width={20} 
+                            height={20} 
                             className={styles.icon} 
                         />
                         <input 

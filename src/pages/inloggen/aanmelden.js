@@ -36,7 +36,7 @@ export default function Login() {
                 <form onSubmit={handleSubmit} className={styles.form}>
                     <div className={styles.inputGroup}>
                         <Image 
-                            src="/user-icon.svg" 
+                            src="/icons/Account.svg" 
                             alt="Name" 
                             width={24} 
                             height={24} 
@@ -53,7 +53,7 @@ export default function Login() {
                     </div>
                     <div className={styles.inputGroup}>
                         <Image 
-                            src="/email-icon.svg" 
+                            src="/icons/Mail.svg" 
                             alt="Email" 
                             width={24} 
                             height={24} 
@@ -70,7 +70,7 @@ export default function Login() {
                     </div>
                     <div className={styles.inputGroup}>
                         <Image 
-                            src="/password-icon.svg" 
+                            src="/icons/wactwoord.svg" 
                             alt="Password" 
                             width={24} 
                             height={24} 
@@ -87,7 +87,7 @@ export default function Login() {
                     </div>
                     <div className={styles.inputGroup}>
                         <Image 
-                            src="/password-icon.svg" 
+                            src="/icons/wactwoord.svg"
                             alt="Confirm Password" 
                             width={24} 
                             height={24} 

@@ -44,9 +44,10 @@ export default function CustomizationStep() {
             content: (
                 <div className={styles.imageContainer}>
                     <img
-                        src="/path/to/your/image.jpg"
+                        src="/WELKOM.svg"
                         alt="Preview van de Shine-app"
                         className={styles.appImage}
+                        style={{ width: '100%', height: 'auto' }}
                     />
                 </div>
             ),
