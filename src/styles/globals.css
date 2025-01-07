@@ -16,3 +16,7 @@ body {
   #root, #__next {
     height: 100%; /* Voor Next.js, zorg ervoor dat de root-container ook 100% hoogte heeft */
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+}
