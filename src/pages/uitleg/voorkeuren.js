@@ -15,6 +15,12 @@ export default function CustomizationStep() {
     const handleNextClick = () => {
         if (currentStep < steps.length - 1) {
             setCurrentStep(currentStep + 1);
+        } else {
+            if (savedData.theme === 'light') {
+                router.push('/light_mode/home');
+            } else if (savedData.theme === 'dark') {
+                router.push('/dark_mode/home');
+            }
         }
     };
 
@@ -38,7 +44,7 @@ export default function CustomizationStep() {
             content: (
                 <div className={styles.imageContainer}>
                     <img
-                        src="/path/to/your/image.jpg" // Pas dit pad aan naar de locatie van je afbeelding
+                        src="/path/to/your/image.jpg"
                         alt="Preview van de Shine-app"
                         className={styles.appImage}
                     />
@@ -134,7 +140,7 @@ export default function CustomizationStep() {
                         onClick={() => handleSave('theme', 'light')}
                     >
                         <img
-                            src="/dark_mode.png" // Vervang door het pad naar je light mode afbeelding
+                            src="/dark_mode.png"
                             alt="Light Mode"
                             className={styles.themeImage}
                         />
@@ -148,7 +154,7 @@ export default function CustomizationStep() {
                         onClick={() => handleSave('theme', 'dark')}
                     >
                         <img
-                            src="/light_mode.png" // Vervang door het pad naar je dark mode afbeelding
+                            src="/light_mode.png"
                             alt="Dark Mode"
                             className={styles.themeImage}
                         />

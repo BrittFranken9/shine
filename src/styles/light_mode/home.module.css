@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}

@@ -22,18 +22,19 @@ export default function Navbar() {
     return (
         <nav className={`${styles.navbar} ${!visible ? styles.hidden : ''}`}>
             <div className={styles.logo}>
-                <Link href="/Maps/home">
-                    <Image src="/fiets.svg" alt="Logo" width={40} height={40} />
+                <Link href="/light_mode/home">
+                    <Image src="/Logo.svg" alt="Logo" width={40} height={40} />
                 </Link>
-            </div>
-            <div className={styles.veloAntwerpen}>
-                <Image src="/Velo-Antwerpen-01.svg" alt="Velo Antwerpen" width={200} height={80} />
             </div>
             <div className={styles.rightLink}>
-                <Link href="/Creatief/home">
-                    <Image src="/Switch.svg" alt="Another Icon" width={30} height={20} />
+                <Link href="/light_mode/meldingen">
+                    <Image src="/meldingen.svg" alt="Another Icon" width={30} height={20} />
+                </Link>
+                <Link href="/light_mode/instellingen">
+                    <Image src="/instellingen.svg" alt="Another Icon" width={30} height={20} />
                 </Link>
             </div>
+            
         </nav>
     );
 }
