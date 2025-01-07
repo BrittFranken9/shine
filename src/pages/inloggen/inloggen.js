@@ -8,28 +8,20 @@ export default function Login() {
     const [password, setPassword] = useState('');
     const router = useRouter();
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
     
-        try {
-            const response = await fetch('http://localhost:3001/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email, password }), // Zorg ervoor dat deze waarden correct zijn
-            });
+        // Hardcoded gebruikersgegevens
+        const hardcodedEmail = "demo@example.com";
+        const hardcodedPassword = "password123";
     
-            if (!response.ok) {
-                const message = await response.text();
-                alert(message); // Toon de foutmelding van de server
-                return;
-            }
-    
+        // Controleer de ingevoerde gegevens
+        if (email === hardcodedEmail && password === hardcodedPassword) {
             alert('Succesvol ingelogd!');
-        } catch (error) {
-            console.error('Login error:', error);
-            alert('Er is een fout opgetreden.');
+            // Optioneel: Routeer naar een andere pagina
+            router.push('/uitleg/zelfzorg'); // Vervang '/dashboard' door de gewenste route
+        } else {
+            alert('Onjuiste inloggegevens, probeer opnieuw.');
         }
     };
 
