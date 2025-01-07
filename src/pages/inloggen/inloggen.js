@@ -6,14 +6,31 @@ import styles from '@/styles/inloggen/inloggen.module.css';
 export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const router = useRouter(); // Next.js router hook
+    const router = useRouter();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log({ email, password });
-
-        // Navigeren naar het uitlegscherm
-        router.push('/uitleg/zelfzorg');
+    
+        try {
+            const response = await fetch('http://localhost:3001/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }), // Zorg ervoor dat deze waarden correct zijn
+            });
+    
+            if (!response.ok) {
+                const message = await response.text();
+                alert(message); // Toon de foutmelding van de server
+                return;
+            }
+    
+            alert('Succesvol ingelogd!');
+        } catch (error) {
+            console.error('Login error:', error);
+            alert('Er is een fout opgetreden.');
+        }
     };
 
     return (
@@ -63,9 +80,8 @@ export default function Login() {
                             required 
                         />
                     </div>
-                    
+                    <button type="submit" className={styles.button}>Inloggen</button>
                 </form>
-                <button type="submit" className={styles.button}>Inloggen</button>
                 <div className={styles.divider}>
                     In plaats daarvan
                     <a href="/inloggen/aanmelden" className={styles.link}>Aanmelden</a>

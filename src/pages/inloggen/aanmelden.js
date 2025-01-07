@@ -3,22 +3,38 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import styles from '@/styles/inloggen/Aanmelden.module.css';
 
-export default function Login() {
+// Simpele lijst om gebruikers op te slaan
+let users = [
+    { email: 'test@example.com', password: '123456' },
+    { email: 'user@example.com', password: 'password123' }
+];
+
+export default function Register() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const router = useRouter(); // Gebruik de useRouter-hook
+    const router = useRouter();
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
         if (password !== confirmPassword) {
             alert('Wachtwoorden komen niet overeen.');
             return;
         }
-        console.log({ name, email, password });
-        // Navigeren naar de uitlegschermen
-        router.push('/uitleg/zelfzorg'); // Vervang '/uitleg-scherm' door de juiste route
+
+        // Controleer of gebruiker al bestaat
+        const existingUser = users.find((u) => u.email === email);
+        if (existingUser) {
+            alert('Er bestaat al een gebruiker met dit e-mailadres.');
+            return;
+        }
+
+        // Voeg nieuwe gebruiker toe
+        users = [...users, { email, password }];
+        alert('Registratie succesvol! Je kunt nu inloggen.');
+        router.push('/inloggen/inloggen'); // Verwijs naar inlogpagina
     };
 
     return (
@@ -102,9 +118,8 @@ export default function Login() {
                             required 
                         />
                     </div>
-                    
+                    <button type="submit" className={styles.button}>Aanmelden</button>
                 </form>
-                <button type="submit" className={styles.button}>Aanmelden</button>
                 <div className={styles.divider}>
                     In plaats daarvan
                     <a href="/inloggen/inloggen" className={styles.link}>Inloggen</a>
