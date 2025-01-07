@@ -1,0 +1,99 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+.skipButton {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #FEBA51;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #333333;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.gradientText {
+    background: linear-gradient(90deg, #B97C96, #FE5351, #FEBA51);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description {
+    font-size: 14px;
+    color: #666666;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 0;
+}
+
+.progressContainer {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.progressDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #cccccc;
+    transition: background-color 0.3s;
+}
+
+.activeDot {
+    background-color: #fe5351;
+}
+
+.button {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #fe5351;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}

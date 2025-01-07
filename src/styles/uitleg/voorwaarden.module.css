@@ -1,0 +1,102 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.declineButton {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fe5351;
+    cursor: pointer;
+}
+
+.content {
+    flex: 1;
+    overflow-y: scroll; /* Houdt scrollbaarheid maar verbergt de balk */
+    -ms-overflow-style: none; /* Verbergt scrollbar in IE en Edge */
+    scrollbar-width: none; /* Verbergt scrollbar in Firefox */
+    width: 100%;
+    padding: 20px;
+    margin-top: 80px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+
+.content::-webkit-scrollbar {
+    display: none; /* Verbergt scrollbar in Chrome, Safari en andere WebKit-browsers */
+}
+
+.title {
+    font-size: 10vw;
+    font-weight: bold;
+    text-align: left;
+    background: linear-gradient(90deg, #51BCFE, #FE5351, #FEBA51);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 20px;
+    font-weight: 500;
+
+}
+
+.section h3 {
+    font-size: 20px;
+    color: #333333;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+
+}
+
+.section p {
+    font-size: 14px;
+    color: #333333;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.acceptContainer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.acceptButton {
+    width: calc(100% - 40px);
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #fe5351;
+    color: #ffffff;
+    text-transform: uppercase;
+}

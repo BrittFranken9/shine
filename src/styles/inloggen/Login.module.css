@@ -1,0 +1,172 @@
+/* Basis CSS (voor iPhone 12 en vergelijkbare schermen) */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.loginBox {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Montserrat', Arial, sans-serif;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #FE5351;
+    color: #ffffff;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+.dividerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #F2F2F2; /* Kies een kleur voor de lijnen */
+}
+
+.divider {
+    font-size: 14px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #333333;
+    text-align: center;
+}
+
+.dividertwo {
+    font-size: 14px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.socialButtons {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.googleButton,
+.facebookButton {
+    background-color: #F2F2F2;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 12px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin-bottom: 20px;
+    font-weight: 450;
+}
+
+.link {
+    color: #FE5351;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+/* Responsieve CSS voor kleinere schermen */
+@media (max-width: 389px) {
+    .loginBox {
+        padding: 15px;
+        max-width: 90%; /* Zorgt ervoor dat het altijd goed past */
+    }
+
+    .button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .divider,
+    .link,
+    .dividertwo {
+        font-size: 12px;
+    }
+
+    .googleButton,
+    .facebookButton {
+        font-size: 12px;
+        gap: 5px;
+    }
+
+    .logo {
+        max-width: 150px;
+    }
+}
+
+/* Responsieve CSS voor grotere schermen */
+@media (min-width: 844px) {
+    .logo {
+        max-width: 250px;
+    }
+
+    .loginBox {
+        max-width: 450px;
+        padding: 25px;
+    }
+
+    .button {
+        font-size: 18px;
+        padding: 14px;
+    }
+
+    .divider,
+    .link,
+    .dividertwo {
+        font-size: 16px;
+    }
+
+    .googleButton,
+    .facebookButton {
+        font-size: 16px;
+        gap: 10px;
+    }
+}

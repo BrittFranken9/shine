@@ -1,0 +1,103 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Verdeel ruimte tussen logo en formulier */
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+    color: #333333;
+    font-family: 'Montserrat', sans-serif; /* Montserrat toegepast */
+    box-sizing: border-box;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Laat de logo-container groeien om ruimte te verdelen */
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.inputContainer {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: #ffffff;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.inputGroup {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    left: 10px;
+    width: 24px;
+    height: 24px;
+    pointer-events: none; /* Voorkom dat de gebruiker per ongeluk de afbeelding selecteert */
+}
+
+.input {
+    width: 100%;
+    padding: 12px 12px 12px 40px; /* Ruimte voor het icoon links */
+    border: 1px solid #FEBA51;
+    border-radius: 50px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif; /* Montserrat toegepast */
+    box-sizing: border-box;
+}
+
+.button {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif; /* Montserrat toegepast */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #FE5351;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+.divider {
+    margin-top: 20px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif; /* Montserrat toegepast */
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.link {
+    color: #FE5351;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 5px;
+    text-decoration: none;
+
+}
