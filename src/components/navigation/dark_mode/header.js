@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '@/styles/navigation/light_mode/header.module.css';
+import styles from '@/styles/navigation/dark_mode/header.module.css';
 
 export default function Navbar() {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -20,7 +20,7 @@ export default function Navbar() {
     }, [prevScrollPos]);
 
     return (
-        <nav className={`${styles.navbar} ${!visible ? styles.hidden : ''}`}>
+        <nav className={`${styles.navbar}`}>
             <div className={styles.logo}>
                 <Link href="/dark_mode/home">
                     <Image src="/Logo.svg" alt="Logo" width={72} height={72} className={styles.logoImage} />

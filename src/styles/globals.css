@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
+html,
 body {
-    font-family: 'Montserrat', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0; /* Verwijder standaardmarges */
+    padding: 0; /* Verwijder standaardpaddings */
+    height: 100%; /* Zorg dat de body de volledige hoogte inneemt */
+    width: 100%; /* Zorg dat de body de volledige breedte inneemt */
 }
 
-html, body {
-    margin: 0; /* Verwijder standaard marges */
-    padding: 0; /* Verwijder standaard paddings */
-    height: 100%; /* Zorg ervoor dat de html en body 100% van de hoogte nemen */
-  }
+* {
+    box-sizing: border-box; /* Zorg dat paddings correct worden berekend */
+}
   
   #root, #__next {
     height: 100%; /* Voor Next.js, zorg ervoor dat de root-container ook 100% hoogte heeft */

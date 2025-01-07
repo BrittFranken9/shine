@@ -20,7 +20,7 @@ export default function Navbar() {
     }, [prevScrollPos]);
 
     return (
-        <nav className={`${styles.navbar} ${!visible ? styles.hidden : ''}`}>
+        <nav className={`${styles.navbar}`}>
             <div className={styles.logo}>
                 <Link href="/light_mode/home">
                     <Image src="/Logo.svg" alt="Logo" width={72} height={72} className={styles.logoImage} />
