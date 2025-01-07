@@ -1,0 +1,71 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #51BCFE, #FE5351, #FEBA51); /* Grote gradient */
+  padding-bottom: 30px;
+  z-index: 1000;
+  color: transparent; /* Zorgt dat tekst transparant is */
+  -webkit-background-clip: text; /* Maakt de gradient zichtbaar op tekst */
+  background-clip: text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: center; /* Centreer knoppen */
+  align-items: center;
+  gap: 20px; /* Verminder ruimte tussen knoppen */
+  align-items: baseline;
+  text-decoration: none;
+}
+
+.footerItem {
+  display: flex;
+  flex-direction: column; /* Icon boven tekst */
+  align-items: center;
+  text-decoration: none;
+  margin: 0; /* Geen extra marges */
+}
+
+.footerIcon {
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+}
+
+.footerLabel {
+  margin-top: 5px; /* Minder ruimte tussen icoon en label */
+  font-size: 12px;
+  background: inherit; /* Gebruik dezelfde gradient als de iconen */
+  -webkit-background-clip: text; /* Zorg dat de gradient zichtbaar is */
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Zorg dat tekst transparant is */
+  text-decoration: none;
+}
+
+.middle .footerIcon {
+  transform: scale(1.2); /* Middelste icoon iets groter */
+  transform-origin: center bottom;
+}
+
+.footer a {
+    text-decoration: none; /* Verwijdert onderstreping */
+    outline: none; /* Verwijdert blauwe rand bij focus */
+  }
+
+  .footerBackground {
+    position: fixed;
+    bottom: 0;
+    padding-top: 10px;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Zorgt dat de achtergrond even groot is als de footer */
+    background-color: #ffffff; /* Kleur van het kader */
+    z-index: 999; /* Lager dan de footer (z-index: 1000) */
+  }

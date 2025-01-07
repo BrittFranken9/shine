@@ -1,0 +1,41 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333333; /* Witte achtergrond */
+    z-index: 1000;
+    padding: 0 20px; /* Padding aan beide zijkanten */
+    box-sizing: border-box; /* Inclusief padding in de breedteberekening */
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.rightLink {
+    display: flex; /* Flexbox om de iconen naast elkaar te zetten */
+    align-items: center;
+    gap: 16px; /* Ruimte tussen de iconen */
+}
+
+.logoImage {
+    display: block;
+    width: 72px; /* Vergroot het logo */
+    height: 72px;
+}
+
+.iconImage {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
