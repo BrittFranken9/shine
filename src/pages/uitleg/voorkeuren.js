@@ -83,7 +83,6 @@ export default function CustomizationStep() {
         {
             title: 'KLEUREN',
             subtitle: 'Welke kleur heeft jou emotie?',
-            description: 'Druk op volgende om verder te gaan naar de app.',
             content: (
                 <div className={styles.colorsContainer}>
                     {[
