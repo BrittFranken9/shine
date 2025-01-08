@@ -5,7 +5,7 @@ export default function DarkModeHome() {
     return (
         <div className={styles.lightBackground}>
             <main>
-                <h1>Welkom bij Light Mode Home</h1>
+                <p className={styles.title}>Welkom bij Light Mode Home</p>
             </main>
             <footer className={styles.footer}>
                 <Link href="/light_mode/tools" passHref>

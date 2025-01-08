@@ -9,6 +9,7 @@
     justify-content: space-between;
     align-items: center;
     font-family: 'montserrat', sans-serif;
+    box-sizing: border-box;
 }
 
 .footer {
@@ -17,7 +18,17 @@
     justify-content: center;
     padding: 20px;
     padding-bottom: 120px;
+    flex-wrap: wrap;
 }
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    color: #333333;
+}
+
 
 /* Stijl voor knoppen */
 .button {
@@ -26,16 +37,75 @@
     border: none;
     border-radius: 20px;
     padding: 12px 40px;
+    font-size: 14px;
     width: 150px;
     height: 36px;
-    font-size: 14px;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    flex-shrink: 0; /* Knoppen blijven dezelfde grootte houden */
 }
 
 /* Hover-effect voor knoppen */
 .button:hover {
     background-color: #cccccc; /* Donkerdere blauwe kleur */
+}
+
+/* Media queries voor responsiviteit */
+@media (max-width: 768px) {
+    .button {
+        padding: 10px 30px;
+        font-size: 12px;
+        width: 150px;
+        height: 36px;
+    }
+
+    .footer {
+        gap: 10px;
+        padding-bottom: 120px;
+        padding: 20px;
+    }
+    .title {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .button {
+        padding: 8px 20px;
+        font-size: 14px;
+        width: 150px;
+        height: 36px; /* Laat knoppen aanpassen aan de inhoud */
+    }
+
+    .footer {
+        gap: 10px;
+        padding-bottom: 120px;
+    }
+    .title {
+        font-size: 18px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 375px) {
+    .button {
+        padding: 8px 20px;
+        font-size: 12px;
+        width: 120px;
+        height: 36px; /* Laat knoppen aanpassen aan de inhoud */
+    }
+
+    .footer {
+        gap: 10px;
+        padding-bottom: 120px;
+    }
+    .title {
+        font-size: 18px;
+        padding: 8px;
+    }
 }
