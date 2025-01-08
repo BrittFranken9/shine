@@ -19,7 +19,8 @@ export default function Voorwaarden() {
     const handleScroll = () => {
         const content = document.querySelector(`.${styles.content}`);
         if (content) {
-            const isBottom = content.scrollHeight - content.scrollTop === content.clientHeight;
+            const margin = 20; // Stelt een marge in van 20px
+            const isBottom = content.scrollHeight - content.scrollTop <= content.clientHeight + margin;
             setIsAtBottom(isBottom);
         }
     };

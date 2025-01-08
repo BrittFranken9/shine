@@ -1,7 +1,8 @@
+/* Basiscontainer */
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     height: 100vh;
     padding: 20px;
@@ -11,9 +12,10 @@
     position: relative;
 }
 
+/* Skip Button */
 .skipButton {
     position: absolute;
-    top: 60px;
+    top: 20px;
     right: 20px;
     background: none;
     border: none;
@@ -23,29 +25,40 @@
     color: #FEBA51;
 }
 
+/* Afbeelding */
 .image {
-    max-width: 100%;
-    height: auto;
-    flex: 1;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    width: 100%; /* Laat de afbeelding zich aanpassen */
+    max-width: 400px; /* Maximale breedte voor grotere schermen */
+    margin-bottom: 20px; /* Ruimte onder de afbeelding */
+    flex-grow: 1; /* Laat de afbeelding extra ruimte innemen in grotere schermen */
 }
 
+.responsiveImage {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Houd de afbeelding proportioneel */
+}
+
+/* Content Container */
 .contentContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding: 0 20px; /* Ruimte aan de zijkanten */
+    text-align: center;
 }
 
+/* Titel */
 .title {
-    font-size: 20px;
+    font-size: 20px; /* Grote tekst voor normale schermen */
     font-weight: bold;
     text-align: center;
     color: #333333;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-bottom: 10px;
     text-transform: uppercase;
 }
 
@@ -56,20 +69,20 @@
     -webkit-text-fill-color: transparent;
 }
 
+/* Beschrijving */
 .description {
     font-size: 14px;
     color: #666666;
     text-align: center;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 0;
+    margin: 0;
 }
 
+/* Progress Indicator */
 .progressContainer {
     display: flex;
     gap: 8px;
     justify-content: center;
-    margin: 40px 0;
+    margin-top: 20px;
 }
 
 .progressDot {
@@ -84,8 +97,10 @@
     background-color: #fe5351;
 }
 
+/* Knop */
 .button {
     width: 100%;
+    max-width: 300px;
     padding: 12px;
     font-size: 14px;
     font-weight: 500;
@@ -96,5 +111,70 @@
     background-color: #fe5351;
     color: #ffffff;
     text-transform: uppercase;
+    margin-top: 20px;
     margin-bottom: 20px;
+}
+
+/* --- RESPONSIEVE STIJLEN --- */
+@media (min-width: 769px) {
+    .container {
+        justify-content: center; /* Plaats de inhoud verticaal gecentreerd */
+    }
+
+    .image {
+        margin-bottom: 0; /* Verwijder standaard ruimte onder de afbeelding */
+    }
+
+    .contentContainer {
+        flex-grow: 1; /* Laat de content-container ruimte aanpassen */
+    }
+}
+
+
+
+/* Voor schermen kleiner dan 768px (tablets en kleine laptops) */
+@media (max-width: 768px) {
+    .title {
+        font-size: 18px; /* Iets kleinere tekst */
+    }
+
+    .description {
+        font-size: 13px; /* Kleinere beschrijvingstekst */
+    }
+
+    .image {
+        max-width: 400px; /* Beperk de grootte van de afbeelding */
+    }
+
+    .button {
+        max-width: 250px; /* Knop wordt iets smaller */
+    }
+}
+
+/* Voor schermen kleiner dan 480px (kleinere telefoons zoals iPhone SE) */
+@media (max-width: 480px) {
+    .skipButton {
+        font-size: 12px; /* Kleinere tekst voor de overslaan-knop */
+    }
+
+    .title {
+        font-size: 16px; /* Kleinere titels */
+    }
+
+    .description {
+        font-size: 12px; /* Kleinere beschrijvingen */
+    }
+
+    .image {
+        max-width: 300px; /* Kleinere afbeelding */
+    }
+
+    .button {
+        max-width: 200px; /* Kleinere knopbreedte */
+    }
+
+    .progressDot {
+        width: 8px; /* Kleinere stipjes */
+        height: 8px;
+    }
 }
