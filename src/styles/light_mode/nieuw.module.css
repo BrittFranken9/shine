@@ -1,0 +1,226 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    padding-bottom: 120px;
+    padding-top: 100px;
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 8vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #51BCFE, #FE5351, #FEBA51);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+.mainContent {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.colorsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    width: 100%;
+}
+
+.colorButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none; /* Geen rand */
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+    max-width: 140px;
+    padding: 0; /* Verwijder padding */
+    position: relative;
+}
+
+.colorButton img {
+    width: 140px; /* Grotere SVG's */
+    height: 120px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.colorButton:hover img {
+    transform: scale(1.1); /* Alleen de afbeelding vergroten bij hover */
+}
+
+.colorButton.active img {
+    transform: scale(1.2); /* Actieve SVG iets groter */
+}
+
+.colorLabel {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin-top: 10px; /* Afstand tot de SVG */
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    pointer-events: none;
+}
+
+.input, .textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    border: 2px solid #FEBA51;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'montserrat', sans-serif;
+    padding-left: 24px;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: #333333;
+    margin-top: 12px;
+}
+
+.input:focus {
+    outline: none; /* Verwijder de standaard outline */
+    border: 2px solid transparent; /* Houd de border transparant */
+    border-image: linear-gradient(90deg, #51BCFE, #FE5351, #FEBA51); /* De gradient */
+    border-image-slice: 1; /* Zorg dat de gradient de border vult */
+    box-shadow: 0 0 8px rgba(81, 188, 254, 0.5); /* Voeg een subtiele gloed toe */
+}
+
+.header h1 {
+    font-size: 8vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333333; /* Maak de tekst wit */
+    margin-bottom: 40px; /* Verhoog de afstand van het kader */
+}
+
+.suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.suggestionsContainer {
+    margin-top: 16px; /* Meer afstand van het inputveld */
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.suggestionButton {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #F2F2F2;
+    color: #333333;
+    text-align: center;
+}
+
+.label {
+    padding-left: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'montserrat', sans-serif;
+    font-weight: 400;
+    color: #333333;
+    text-align: center;
+}
+
+.suggestionButton:hover {
+    background-color: #777777;
+    color:#ffffff;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px; /* Houd consistent met de container */
+    margin-top: 20px;
+    gap: 10px; /* Ruimte tussen knoppen */
+}
+
+.button, .backButton {
+    flex-grow: 1; /* Zorg ervoor dat de knoppen evenveel ruimte innemen */
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #FE5351;
+    color: #ffffff;
+    text-align: center;
+    max-width: none; /* Verwijder eventuele beperking in breedte */
+}
+
+.backButton {
+    background-color: #F2F2F2;
+    color: #333333;
+}
+
+.button:hover {
+    background-color: #FF6F61;
+}
+
+.backButton:hover {
+    background-color: #777777;
+}
+
+.notesTextarea {
+    width: 100%; /* Neem de volledige breedte van de container */
+    max-width: 400px; /* Stel een maximale breedte in */
+    height: 120px; /* Stel een specifieke hoogte in */
+    padding: 12px;
+    border: 2px solid #FEBA51;
+    border-radius: 20px; /* Rond de hoeken iets minder af */
+    background-color: transparent;
+    color: #333333;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    resize: none; /* Voorkom dat gebruikers de grootte kunnen aanpassen */
+    box-sizing: border-box;
+    margin-top: 20px; /* Meer ruimte boven de textarea */
+}
+
+.notesTextarea:focus {
+    border: 2px solid transparent; /* Maak de standaard border transparant */
+    border-image: linear-gradient(90deg, #51BCFE, #FE5351, #FEBA51);
+    border-image-slice: 1; /* Zorg dat de gradient over de hele border gaat */
+    outline: none; /* Verwijder de standaard outline */
+    box-shadow: 0 0 8px rgba(81, 188, 254, 0.5); /* Voeg een lichte gloed toe */
+}
