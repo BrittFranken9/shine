@@ -1,15 +1,124 @@
+/* Baseline voor kleinere schermen zoals iPhone 12 */
 .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     height: 100vh;
+    width: 100vw;
     padding: 20px;
     box-sizing: border-box;
     background-color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     position: relative;
+    overflow: hidden;
 }
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 9vw; /* Dynamische grootte gebaseerd op viewport breedte */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.header h2 {
+    font-size: 16px;
+}
+
+.header p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Kleinere schermen zoals iPhone SE */
+@media (max-width: 380px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 9vw;
+    }
+
+    .header h2,
+    .button {
+        font-size: 12px;
+    }
+
+    .description,
+    .subtitle {
+        font-size: 12px;
+    }
+
+    .imageContainer {
+        width: 70%; /* Maak container kleiner */
+        height: auto; /* Zorg dat hoogte zich aanpast */
+    }
+
+    .image {
+        width: 100%; /* Past zich aan binnen de container */
+        max-width: 200px; /* Voeg limiet toe */
+        height: auto; /* Houdt de verhouding */
+        aspect-ratio: 16 / 9; /* Voeg aspect-ratio toe */
+    }
+}
+
+
+/* Tablets */
+@media (min-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+
+    .header h1 {
+        font-size: 6vw;
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .imageContainer {
+        width: 80%; /* Iets grotere container voor tablets */
+    }
+
+    .image {
+        max-width: 100%;
+        height: auto;
+    }
+
+}
+
+/* Desktops */
+@media (min-width: 1024px) {
+    .container {
+        padding: 40px;
+    }
+
+    .header h1 {
+        font-size: 4vw;
+    }
+
+    .button {
+        font-size: 18px;
+        padding: 20px;
+    }
+
+    .imageContainer {
+        width: 100%; /* Volledige breedte op desktops */
+    }
+
+    .image {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
 
 .buttonContainer {
     display: flex;
@@ -43,13 +152,17 @@
     text-align: center;
 }
 
-.image {
-    max-width: 100%;
-    height: auto;
-    flex: 1;
+.imageContainer {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    max-width: 100%; /* Zorgt ervoor dat de afbeelding nooit breder wordt dan de container */
+    height: auto; /* Houdt de verhouding intact */
 }
 
 .header {
@@ -77,7 +190,7 @@
 }
 
 .title {
-    font-size: 9vw;
+    font-size: 8vw; /* Dynamisch gebaseerd op schermbreedte */
     font-weight: bold;
     text-align: left;
     background: linear-gradient(90deg, #51BCFE, #FE5351, #FEBA51);
