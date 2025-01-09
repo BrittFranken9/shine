@@ -15,7 +15,6 @@
 
 .header {
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .header h1 {
@@ -170,7 +169,6 @@
     justify-content: space-between;
     width: 100%;
     max-width: 400px; /* Houd consistent met de container */
-    margin-top: 20px;
     gap: 10px; /* Ruimte tussen knoppen */
 }
 
@@ -223,4 +221,89 @@
     border-image-slice: 1; /* Zorg dat de gradient over de hele border gaat */
     outline: none; /* Verwijder de standaard outline */
     box-shadow: 0 0 8px rgba(81, 188, 254, 0.5); /* Voeg een lichte gloed toe */
+}
+
+@media (max-height: 700px) {
+    /* Kleine schermen */
+    .header h1 {
+        font-size: 6vw;
+    }
+
+    .colorButton img {
+        width: 100px;
+        height: 80px;
+    }
+
+    .colorLabel {
+        font-size: 12px;
+    }
+
+    .input, .textarea, .notesTextarea {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .button, .backButton {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .suggestionButton {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .label {
+        padding-left: 12px;
+        font-size: 12px;
+    }
+}
+
+@media (min-height: 1000px) {
+    /* Grote schermen */
+    .header h1 {
+        font-size: 7vw;
+    }
+
+    .colorButton img {
+        width: 180px;
+        height: 150px;
+    }
+
+    .colorLabel {
+        font-size: 24px;
+    }
+
+    .input, .textarea, .notesTextarea {
+        font-size: 24px;
+        padding: 14px;
+    }
+
+    .button, .backButton {
+        font-size: 24px;
+        padding: 18px;
+    }
+
+    .suggestionButton {
+        font-size: 24px;
+        padding: 10px 20px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .notesTextarea {
+        height: 150px;
+    }
+
+    .label {
+        padding-left: 16px;
+        font-size: 24px;
+        font-weight: 500;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-family: 'montserrat', sans-serif;
+        font-weight: 400;
+        text-align: center;
+    }
 }
